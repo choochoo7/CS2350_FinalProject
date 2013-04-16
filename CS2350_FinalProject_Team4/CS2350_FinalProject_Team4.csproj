@@ -47,6 +47,7 @@
     <Compile Include="Boldness.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="Compatability.cs" />
+    <Compile Include="ConsoleSpinner.cs" />
     <Compile Include="Graphics.cs" />
     <Compile Include="Honesty.cs" />
     <Compile Include="MainConsole.cs" />
