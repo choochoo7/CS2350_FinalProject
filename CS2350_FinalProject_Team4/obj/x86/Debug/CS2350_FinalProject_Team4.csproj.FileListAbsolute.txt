@@ -3,3 +3,8 @@ C:\Users\RickB\Documents\Kennesaw\CS2350 Obj Orient Prog\CS2350_FinalProject_Tea
 C:\Users\RickB\Documents\Kennesaw\CS2350 Obj Orient Prog\CS2350_FinalProject_Team4\CS2350_FinalProject_Team4\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\RickB\Documents\Kennesaw\CS2350 Obj Orient Prog\CS2350_FinalProject_Team4\CS2350_FinalProject_Team4\obj\x86\Debug\CS2350_FinalProject_Team4.exe
 C:\Users\RickB\Documents\Kennesaw\CS2350 Obj Orient Prog\CS2350_FinalProject_Team4\CS2350_FinalProject_Team4\obj\x86\Debug\CS2350_FinalProject_Team4.pdb
+C:\Users\RickB\Documents\Kennesaw\CS2350 Obj Orient Prog\CS2350_FinalProject_Team4\CS2350_FinalProject_Team4\obj\x86\Debug\Interop.WMPLib.dll
+C:\Users\RickB\Documents\Kennesaw\CS2350 Obj Orient Prog\CS2350_FinalProject_Team4\CS2350_FinalProject_Team4\obj\x86\Debug\CS2350_FinalProject_Team4.csproj.ResolveComReference.cache
+C:\Users\RickB\Documents\Kennesaw\CS2350 Obj Orient Prog\CS2350_FinalProject_Team4\CS2350_FinalProject_Team4\obj\x86\Debug\CS2350_FinalProject_Team4.Properties.Resources.resources
+C:\Users\RickB\Documents\Kennesaw\CS2350 Obj Orient Prog\CS2350_FinalProject_Team4\CS2350_FinalProject_Team4\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\RickB\Documents\Kennesaw\CS2350 Obj Orient Prog\CS2350_FinalProject_Team4\CS2350_FinalProject_Team4\obj\x86\Debug\GenerateResource.write.1.tlog

@@ -34,7 +34,7 @@ namespace CS2350_FinalProject_Team4
             int charRate = 3;
             int userInput;
 
-            Graphics.HonestFont();
+            Graphics.PatientFont();
 
             Console.SetCursorPosition(20, 22);
             Console.Write("Are you Patient? Enter 1 for No, or 2 for Yes\n");

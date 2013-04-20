@@ -190,13 +190,15 @@ namespace CS2350_FinalProject_Team4
         public static int intCheck(string inValue, int errorCode)
         {
             int userInput = 1000;
+            int i = 2;  //space for multiple console entries
+            int tries = 1; //how many errors have occured
             bool correct = false;
             while (correct == false)
             {
                 if (int.TryParse(inValue, out userInput))   //TryParse loop to allow keyevent check for non-numeric values
                 {
                     userInput = Convert.ToInt32(inValue);
-                    int i = 2;  //space for multiple console entries
+                    
 
                     switch (errorCode)
                     {
@@ -206,8 +208,7 @@ namespace CS2350_FinalProject_Team4
                             else
                             {
                                 string display;
-                                int tries = 1;
-
+                                
                                 switch (tries)  //vary output message
                                 {
                                     case 1:
@@ -227,7 +228,7 @@ namespace CS2350_FinalProject_Team4
                                 //invalid entry
                                 MessageBox.Show(display, "This isn't that hard, try to pay attention.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Console.SetCursorPosition(35, (27 + i));
-                                i++;
+                  //              i++;
                                 inValue = Console.ReadLine();
                             }
                             break;
@@ -237,8 +238,7 @@ namespace CS2350_FinalProject_Team4
                             else
                             {
                                 string display;
-                                int tries = 1;
-
+                                
                                 switch (tries)  //vary output message
                                 {
                                     case 1:
@@ -258,7 +258,7 @@ namespace CS2350_FinalProject_Team4
                                 //invalid entry
                                 MessageBox.Show(display, "Seriously?!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Console.SetCursorPosition(35, (27 + i));
-                                i++;
+                  //              i++;
                                 inValue = Console.ReadLine();
                             }
                             break;
@@ -268,6 +268,8 @@ namespace CS2350_FinalProject_Team4
 
 
                 }   //close try parse loop
+
+                i++;
 
             }   //close while
 

@@ -139,6 +139,8 @@ namespace CS2350_FinalProject_Team4
         public static void HeartsMoving()
         {
             int movement = 1;
+
+            Thread.Sleep(2000);
             while (movement < 3)
             {
                 switch (movement)
