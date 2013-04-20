@@ -7,15 +7,16 @@ namespace CS2350_FinalProject_Team4
 {
     class Responsibility
     {
-        private static int responsibilityRating;
+        private int responsibilityRating;
         private static string inValue;
 
 
         public Responsibility()
         {
+            this.responsibilityRating = getResponsibilityRating();
         }
 
-        public static int ResponsibilityRating
+        public int ResponsibilityRating
         {
             get
             {
@@ -28,29 +29,36 @@ namespace CS2350_FinalProject_Team4
             }
         }
 
-        public static void getResponsibilityRating()
+        //get characteristic rating from user
+        public static int getResponsibilityRating()
         {
-            Console.Write("Are you Responsible?Please answer No or Yes\n");
-            inValue = Console.ReadLine();
+            int charRate = 3;
+            int userInput;
 
-            switch (inValue)
+            Graphics.HonestFont();
+
+            Console.SetCursorPosition(20, 22);
+            Console.Write("Are you Responsible? Enter 1 for No, or 2 for Yes\n");
+            Console.SetCursorPosition(35, 27);
+            inValue = Console.ReadLine();
+            //send input to error check before assigning
+            userInput = Client.intCheck(inValue, 1);
+            Console.Clear();
+
+            switch (userInput)
             {
-                case "Yes":
-                case "yes":
-                case "YES":
-                    responsibilityRating = 1;
+                case 1: //no
+                    charRate = 1;
 
                     break;
-                case "No":
-                case "no":
-                case "NO":
-                case "nO":
-                    responsibilityRating = 0;
+                case 2: //yes
+                    charRate = 2;
 
                     break;
             }
-        }
+            return charRate;
+        }   //close getResponsibilityRating
 
-    }
+    }   //close CLass
 
-}
+}   //close Namespace

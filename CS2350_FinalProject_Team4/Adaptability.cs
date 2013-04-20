@@ -7,14 +7,15 @@ namespace CS2350_FinalProject_Team4
 {
     class Adaptability
     {
-        private static int adaptabilityRating;
+        private int adaptabilityRating;
         private static string inValue;
 
         public Adaptability()
         {
+            this.adaptabilityRating = getAdaptabilityRating();
         }
 
-        public static int AdaptabilityRating
+        public int AdaptabilityRating
         {
             get
             {
@@ -27,27 +28,36 @@ namespace CS2350_FinalProject_Team4
             }
         }
 
-        public static void getAdaptabilityRating()
+        //get characteristic rating from user
+        public static int getAdaptabilityRating()
         {
-            Console.Write("Are you Adaptable?Please answer No or Yes\n");
-            inValue = Console.ReadLine();
+            int charRate = 3;
+            int userInput;
 
-            switch (inValue)
+            Graphics.AdaptableFont();
+
+            Console.SetCursorPosition(20, 22);
+            Console.Write("Are you Adaptable? Enter 1 for No, or 2 for Yes\n");
+            Console.SetCursorPosition(35, 27);
+            inValue = Console.ReadLine();
+            //send input to error check before assigning
+            userInput = Client.intCheck(inValue, 1);
+            Console.Clear();
+
+            switch (userInput)
             {
-                case "Yes":
-                case "yes":
-                case "YES":
-                    adaptabilityRating = 1;
+                case 1: //no
+                    charRate = 1;
 
                     break;
-                case "No":
-                case "no":
-                case "NO":
-                case "nO":
-                    adaptabilityRating = 0;
+                case 2: //yes
+                    charRate = 2;
 
                     break;
             }
-        }
-    }
-}
+            return charRate;
+        }   //close getAdaptabilityRating
+
+    }   //close CLass
+
+}   //close Namespace

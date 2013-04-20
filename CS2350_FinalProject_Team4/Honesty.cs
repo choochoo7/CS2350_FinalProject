@@ -7,15 +7,17 @@ namespace CS2350_FinalProject_Team4
 {
     class Honesty
     {
-        private static int honestyRating;
+       
+        private int honestyRating;
         private static string inValue;
 
         public Honesty()
         {
+            this.honestyRating = getHonestyRating();
         }
 
 
-        public static int HonestyRating
+        public int HonestyRating
         {
             get
             {
@@ -28,30 +30,36 @@ namespace CS2350_FinalProject_Team4
             }
         }
 
-        public static void getHonestyRating()
+        //get characteristic rating from user
+        public static int getHonestyRating()
         {
-            Console.Write("Are you Honest?Please answer No or Yes\n");
-            inValue = Console.ReadLine();
+            int charRate = 3;
+            int userInput;
 
-            switch (inValue)
+            Graphics.HonestFont();
+
+            Console.SetCursorPosition(20, 22);
+            Console.Write("Are you Honest? Enter 1 for No, or 2 for Yes\n");
+            Console.SetCursorPosition(35, 27);
+            inValue = Console.ReadLine();
+            //send input to error check before assigning
+            userInput = Client.intCheck(inValue, 1);
+            Console.Clear();
+
+            switch (userInput)
             {
-                case "Yes":
-                case "yes":
-                case "YES":
-                    HonestyRating = 1;
+                case 1: //no
+                    charRate = 1;
 
                     break;
-                case "No":
-                case "no":
-                case "NO":
-                case "nO":
-                    honestyRating = 0;
+                case 2: //yes
+                    charRate = 2;
 
                     break;
             }
+            return charRate;
+        }   //close getHonestyRating
 
-        }
+    }   //close CLass
 
-    }
-
-}
+}   //close Namespace

@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -8,35 +8,31 @@ namespace CS2350_FinalProject_Team4
 {
     class MainConsole
     {
+
         static void Main(string[] args)
         {
+            //create graphics object to pass to graphics class for any visuals
+            Graphics graphObj = new Graphics();
 
-            //alter console graphics and measurements
-          Console.Title = "Richard_Bradley_CS2350_Lab_7 Assignment 7";
-            Console.SetWindowSize(85, 43);
-            Console.BackgroundColor = ConsoleColor.White;
-            Console.ForegroundColor = ConsoleColor.Black;
-            Console.CursorVisible = false;
-            Console.Clear();
-            /* 
-                       Sound.RangedBeep();
-                       Sound.SystemSound();
+            //set console size and basic attributes
+            Graphics.ConsoleBasics();
+            Graphics.ConsoleIntro();
 
-                       Console.Write("Loading");
-                       for (int i = 0; i < 10; i++)
-                       {
-                           Thread.Sleep(100);
-                           Console.Write(".");
-                       }
-             */
+            //send to opening sequence animation
+ //           Graphics.HeartsMoving();
 
-            ConsoleSpinner spin = new ConsoleSpinner();
-            Console.Write("Working....");
-            while (true)
-            {
-                spin.Turn();
-            }
-        }
+
+            //call client object
+            Client currentClient = new Client();
+
+
+            //send client object to compatability class
+            Compatability compare = new Compatability(currentClient.CurrentClient);
+
+            
+            
+
+        }   //close main
 
     }
 }
