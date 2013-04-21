@@ -60,9 +60,15 @@ namespace CS2350_FinalProject_Team4.Properties {
             }
         }
         
-        internal static System.IO.UnmanagedMemoryStream _Disc_2__03___Let_s_Get_It_On__2003_Remaster_Album_Version_ {
+        internal static System.IO.UnmanagedMemoryStream All_By_Myself_CS {
             get {
-                return ResourceManager.GetStream("_Disc_2__03___Let_s_Get_It_On__2003_Remaster_Album_Version_", resourceCulture);
+                return ResourceManager.GetStream("All_By_Myself_CS", resourceCulture);
+            }
+        }
+        
+        internal static System.IO.UnmanagedMemoryStream Let_s_Get_It_On_CS {
+            get {
+                return ResourceManager.GetStream("Let_s_Get_It_On_CS", resourceCulture);
             }
         }
     }

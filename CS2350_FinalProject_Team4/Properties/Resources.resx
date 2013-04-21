@@ -118,7 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="_Disc_2__03___Let_s_Get_It_On__2003_Remaster_Album_Version_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\(Disc 2) 03 - Let's Get It On (2003 Remaster Album Version).wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="All_By_Myself_CS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\All By Myself_CS.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Let_s_Get_It_On_CS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Let's Get It On_CS.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

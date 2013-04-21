@@ -5,43 +5,21 @@ using System.Text;
 using System.Media;
 using System.Threading;
 
+
 namespace CS2350_FinalProject_Team4
 {
     class Sound
     {
-        public static void RangedBeep()
+
+        public static void introMusic()
         {
-            for (int i = 37; i <= 2767; i += 200)
-            {
-                Console.Beep(i, 100);
-            }
+            new System.Media.SoundPlayer(Properties.Resources.Let_s_Get_It_On_CS).Play();
         }
 
-        public static void SystemSound()
+        public static void soSorryMusic()
         {
-            Console.WriteLine("Asterisk");
-            SystemSounds.Asterisk.Play();
-            Thread.Sleep(1000);
-
-            Console.WriteLine("Beep");
-            SystemSounds.Beep.Play();
-            Thread.Sleep(1000);
-
-            Console.WriteLine("Exclamation");
-            SystemSounds.Exclamation.Play();
-            Thread.Sleep(1000);
-
-            Console.WriteLine("Hand");
-            SystemSounds.Hand.Play();
-            Thread.Sleep(1000);
-
-            Console.WriteLine("Question");
-            SystemSounds.Question.Play();
-            Thread.Sleep(1000);
+            new System.Media.SoundPlayer(Properties.Resources.All_By_Myself_CS).Play();
         }
-
-        //comments to force save to check on GitHub response
-
 
     }
 }

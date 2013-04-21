@@ -198,7 +198,7 @@ namespace CS2350_FinalProject_Team4
                 if (int.TryParse(inValue, out userInput))   //TryParse loop to allow keyevent check for non-numeric values
                 {
                     userInput = Convert.ToInt32(inValue);
-                    
+
 
                     switch (errorCode)
                     {
@@ -208,7 +208,7 @@ namespace CS2350_FinalProject_Team4
                             else
                             {
                                 string display;
-                                
+
                                 switch (tries)  //vary output message
                                 {
                                     case 1:
@@ -228,7 +228,6 @@ namespace CS2350_FinalProject_Team4
                                 //invalid entry
                                 MessageBox.Show(display, "This isn't that hard, try to pay attention.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Console.SetCursorPosition(35, (27 + i));
-                  //              i++;
                                 inValue = Console.ReadLine();
                             }
                             break;
@@ -238,7 +237,7 @@ namespace CS2350_FinalProject_Team4
                             else
                             {
                                 string display;
-                                
+
                                 switch (tries)  //vary output message
                                 {
                                     case 1:
@@ -258,7 +257,6 @@ namespace CS2350_FinalProject_Team4
                                 //invalid entry
                                 MessageBox.Show(display, "Seriously?!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Console.SetCursorPosition(35, (27 + i));
-                  //              i++;
                                 inValue = Console.ReadLine();
                             }
                             break;
@@ -268,6 +266,13 @@ namespace CS2350_FinalProject_Team4
 
 
                 }   //close try parse loop
+                else
+                {
+                    //non-numeric entry
+                    MessageBox.Show("Let's try a real number this time, shall we?", "Seriously?!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Console.SetCursorPosition(35, (27 + i));
+                    inValue = Console.ReadLine();
+                }
 
                 i++;
 
