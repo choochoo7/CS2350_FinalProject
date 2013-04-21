@@ -37,8 +37,10 @@ namespace CS2350_FinalProject_Team4
 
             Graphics.ReliableFont();
 
-            Console.SetCursorPosition(20, 22);
-            Console.Write("Are you Reliable? Enter 1 for No, or 2 for Yes\n");
+            Console.SetCursorPosition(0, 22);
+            Console.Write("You're at work, trying to beat a deadline. Your friend calls you. "+
+                "He/She is stuck in the middle of nowhere with a flat tire. You (1) go pick them "+
+                "up. A friend in need is a friend indeed. Or you (2) ignore the call. They know how to dial a tow truck!\n");
             Console.SetCursorPosition(35, 27);
             inValue = Console.ReadLine();
             //send input to error check before assigning
