@@ -38,8 +38,9 @@ namespace CS2350_FinalProject_Team4
 
             Graphics.HonestFont();
 
-            Console.SetCursorPosition(20, 22);
-            Console.Write("Are you Honest? Enter 1 for No, or 2 for Yes\n");
+            Console.SetCursorPosition(0, 22);
+            Console.Write("Do you (1) pride yourself on being honest to a fault," +
+            " or (2) occasionally tell a \nwhite lie or two?\n");
             Console.SetCursorPosition(35, 27);
             inValue = Console.ReadLine();
             //send input to error check before assigning

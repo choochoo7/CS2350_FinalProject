@@ -37,8 +37,10 @@ namespace CS2350_FinalProject_Team4
 
             Graphics.ResponsibleFont();
 
-            Console.SetCursorPosition(20, 22);
-            Console.Write("Are you Responsible? Enter 1 for No, or 2 for Yes\n");
+            Console.SetCursorPosition(0, 22);
+            Console.Write("Your friend gives you a fish to take care of for a few weeks. " +
+               "At the end of the \nfish's stay is it (1) floating upside down in a sea of" +
+               " algae and unidentified floating objects, or (2) healthy and happy?\n");
             Console.SetCursorPosition(35, 27);
             inValue = Console.ReadLine();
             //send input to error check before assigning

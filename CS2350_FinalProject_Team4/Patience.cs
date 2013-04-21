@@ -36,8 +36,10 @@ namespace CS2350_FinalProject_Team4
 
             Graphics.PatientFont();
 
-            Console.SetCursorPosition(20, 22);
-            Console.Write("Are you Patient? Enter 1 for No, or 2 for Yes\n");
+            Console.SetCursorPosition(0, 22);
+            Console.Write("Are you (1) patient enough to watch grass grow or paint dry, or " +
+               "(2) unable to wait \nthe minute and a half to pop popcorn in the microwave." +
+               " Even though the other kind \ntastes better, you buy the pre-popped kind to avoid the wait.\n");
             Console.SetCursorPosition(35, 27);
             inValue = Console.ReadLine();
             //send input to error check before assigning

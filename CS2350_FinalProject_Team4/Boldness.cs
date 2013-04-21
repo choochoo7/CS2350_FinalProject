@@ -36,8 +36,10 @@ namespace CS2350_FinalProject_Team4
 
             Graphics.BoldFont();
 
-            Console.SetCursorPosition(20, 22);
-            Console.Write("Are you Bold? Enter 1 for No, or 2 for Yes\n");
+            Console.SetCursorPosition(0, 22);
+            Console.Write("Which are you? (1) You love trying new things, like sky diving and spicy Persian \nfood." +
+               " (2) You stick to the known, like eating either chocolate or vanilla ice cream. Occasionally you " +
+               "go out on a limb and buy strawberry.\n");
             Console.SetCursorPosition(35, 27);
             inValue = Console.ReadLine();
             //send input to error check before assigning

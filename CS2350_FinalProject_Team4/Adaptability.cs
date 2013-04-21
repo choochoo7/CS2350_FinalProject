@@ -36,8 +36,10 @@ namespace CS2350_FinalProject_Team4
 
             Graphics.AdaptableFont();
 
-            Console.SetCursorPosition(20, 22);
-            Console.Write("Are you Adaptable? Enter 1 for No, or 2 for Yes\n");
+            Console.SetCursorPosition(0, 22);
+            Console.Write("Your job asks you to move to Germany. Do you (1) fight the move: " +
+               "you're happy where \nyou are, and you hate change, or (2) embrace the move: " +
+               "you're excited to try new \nexperiences and embrace a new lifestyle\n");
             Console.SetCursorPosition(35, 27);
             inValue = Console.ReadLine();
             //send input to error check before assigning
