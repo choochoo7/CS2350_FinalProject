@@ -36,11 +36,17 @@ namespace CS2350_FinalProject_Team4
 
             Graphics.AdaptableFont();
 
-            Console.SetCursorPosition(0, 22);
-            Console.Write("Your job asks you to move to Germany. Do you (1) fight the move: " +
-               "you're happy where \nyou are, and you hate change, or (2) embrace the move: " +
-               "you're excited to try new \nexperiences and embrace a new lifestyle\n");
-            Console.SetCursorPosition(35, 27);
+            Console.SetCursorPosition(0, 18);
+            Console.Write("   Your job asks you to move to Germany. Do you:");
+            Console.SetCursorPosition(10, 22);
+            Console.Write("(1) fight the move: you're happy where you are, and you hate change");
+            Console.SetCursorPosition(14, 24);
+            Console.Write("OR");
+            Console.SetCursorPosition(10, 26);
+            Console.Write("(2) embrace the move: you're excited to try new experiences and embrace");
+            Console.SetCursorPosition(10, 27);
+            Console.Write("a new lifestyle");
+            Console.SetCursorPosition(35, 30);
             inValue = Console.ReadLine();
             //send input to error check before assigning
             userInput = Client.intCheck(inValue, 1);

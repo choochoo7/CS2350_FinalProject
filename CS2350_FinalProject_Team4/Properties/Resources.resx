@@ -121,6 +121,12 @@
   <data name="All_By_Myself_CS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\All By Myself_CS.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Cant_Get_Enough_CS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cant_Get_Enough_CS.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Drums_cs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Drums_cs.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Let_s_Get_It_On_CS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Let's Get It On_CS.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

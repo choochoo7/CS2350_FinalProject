@@ -3,11 +3,13 @@ using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace CS2350_FinalProject_Team4
 {
     class Compatability
     {
+        private static Random randomBust = new Random();
 
         ArrayList compareClient;
 
@@ -53,7 +55,7 @@ namespace CS2350_FinalProject_Team4
             jason.Add(1);
             jason.Add(2);
             jason.Add(1);
-            String client2bio = "I'm just your average guy. I like long walks on the beach, dogs,\nand "
+            String client2bio = "I'm just your average guy. I like long walks on the beach, dogs, and "
                     + "watching football on Sundays. ";
 
             ArrayList brad = new ArrayList();
@@ -71,7 +73,7 @@ namespace CS2350_FinalProject_Team4
             brad.Add(1);
             brad.Add(1);
             String client3bio = "I've changed my major seven times, but I'm looking for"
-                   + "\na girl I can really commit to.";
+                   + " a girl I can really commit to.";
 
 
             ArrayList jimmy = new ArrayList();
@@ -89,7 +91,7 @@ namespace CS2350_FinalProject_Team4
             jimmy.Add(2);
             jimmy.Add(1);
             String client4bio = "I own a line of breakfast foods."
-                    + "\nThe sun plays me on TV. Need I say more?";
+                    + " The sun plays me on TV. Need I say more?";
 
             ArrayList fred = new ArrayList();
             fred.Add(2);
@@ -105,7 +107,7 @@ namespace CS2350_FinalProject_Team4
             fred.Add(2);
             fred.Add(2);
             fred.Add(2);
-            String client5bio = "I signed up for this because it's cheaper than LifeAlert; \nif I fall and can't get up, I'll just "
+            String client5bio = "I signed up for this because it's cheaper than LifeAlert; if I fall and can't get up, I'll just "
                                 + "call you!";
 
             ArrayList jennifer = new ArrayList();
@@ -123,7 +125,7 @@ namespace CS2350_FinalProject_Team4
             jennifer.Add(2);
             jennifer.Add(2);
             String client6bio = "I don't like pina coladas. Or getting caught in the rain." +
-            " \nBut I have 20 cats that can't wait to meet you!";
+            " But I have 20 cats that can't wait to meet you!";
 
             ArrayList susan = new ArrayList();
             susan.Add(1);
@@ -140,8 +142,8 @@ namespace CS2350_FinalProject_Team4
             susan.Add(2);
             susan.Add(2);
             String client7bio = "I have a detailed 10 year plan; this year I'm supposed to "
-                    + "\nget married. I have the ring picked out, you can pick it up at"
-                  + "\nTiffany's";
+                    + "get married. I have the ring picked out, you can pick it up at "
+                  + "Tiffany's";
 
             ArrayList angelina = new ArrayList();
             angelina.Add(1);
@@ -220,57 +222,221 @@ namespace CS2350_FinalProject_Team4
                         compatArray[9] += 1;
                 }
             }
+
+            //set max value to array high value
             int maxValue = compatArray.Max();
             int maxIndex = Array.IndexOf(compatArray, maxValue);
-            Console.WriteLine("Press any key to continue...");
+
+            //randomizer for occasional no match scene
+            int busted = Convert.ToInt32(randomBust.Next(5));
+            if (busted == 4)
+                maxIndex = 10;
+
+            Thread.Sleep(1000);
+            Console.SetCursorPosition(22, 18);
+            Console.WriteLine("We have finished our tabulations....");
+            Sound.DrumRollMusic();
+            Thread.Sleep(1000);
+            Console.SetCursorPosition(22, 22);
+            Console.WriteLine("Press a key to find out what's in store for you...");
             Console.ReadKey();
             Console.Clear();
-
+            //reset graphics to white/DkRed
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.Clear();
             switch (maxIndex)
             {
-                case 0: Console.WriteLine("You have a match!" + "\nName: " + john[1] + " " +
-                                            john[2] + "\nAge: " + john[3] + "\nHair Color: " + john[4]
-                                            + "\nHeight: " + john[5] + " inches" + "\n\n" + "Bio: " + client1bio);
+                case 0:
+                    Sound.MatchMusic();
+                    Thread.Sleep(1000);
+                    Graphics.MatchFont();
+                    Thread.Sleep(1000);
+                    Console.SetCursorPosition(22, 14);
+                    Console.Write("You have a match!");
+                    Console.SetCursorPosition(26, 18);
+                    Console.Write("His name is: " + john[1] + " " + john[2]);
+                    Console.SetCursorPosition(26, 20);
+                    Console.Write("He's " + john[3] + " years old.");
+                    Console.SetCursorPosition(26, 22);
+                    Console.Write("He's got " + john[4] + " hair.");
+                    Console.SetCursorPosition(26, 24);
+                    Console.Write("He's " + john[5] + " inches tall.");
+                    Console.SetCursorPosition(2, 27);
+                    Console.Write("Here's what " + john[1] + " had to say about himself: " + client1bio);
                     break;
-                case 1: Console.WriteLine("You have a match!" + "\nName: " + jason[1] + " " +
-                                            jason[2] + "\nAge: " + jason[3] + "\nHair Color: " + jason[4]
-                                            + "\nHeight: " + jason[5] + " inches" + "\n\n" + "Bio: " + client2bio);
+                case 1:
+                    Sound.MatchMusic();
+                    Thread.Sleep(1000);
+                    Graphics.MatchFont();
+                    Thread.Sleep(1000);
+                    Console.SetCursorPosition(22, 14);
+                    Console.Write("You have a match!");
+                    Console.SetCursorPosition(26, 18);
+                    Console.Write("His name is: " + jason[1] + " " + jason[2]);
+                    Console.SetCursorPosition(26, 20);
+                    Console.Write("He's " + jason[3] + " years old.");
+                    Console.SetCursorPosition(26, 22);
+                    Console.Write("He's got " + jason[4] + " hair.");
+                    Console.SetCursorPosition(26, 24);
+                    Console.Write("He's " + jason[5] + " inches tall.");
+                    Console.SetCursorPosition(2, 27);
+                    Console.Write("Here's what " + jason[1] + " had to say about himself: " + client2bio);
                     break;
-                case 2: Console.WriteLine("You have a match!" + "\nName: " + brad[1] + " " +
-                                            brad[2] + "\nAge: " + brad[3] + "\nHair Color: " + brad[4]
-                                            + "\nHeight: " + brad[5] + " inches" + "\n\n" + "Bio: " + client3bio);
+                case 2:
+                    Sound.MatchMusic();
+                    Thread.Sleep(1000);
+                    Graphics.MatchFont();
+                    Thread.Sleep(1000);
+                    Console.SetCursorPosition(22, 14);
+                    Console.Write("You have a match!");
+                    Console.SetCursorPosition(26, 18);
+                    Console.Write("His name is: " + brad[1] + " " + brad[2]);
+                    Console.SetCursorPosition(26, 20);
+                    Console.Write("He's " + brad[3] + " years old.");
+                    Console.SetCursorPosition(26, 22);
+                    Console.Write("He's got " + brad[4] + " hair.");
+                    Console.SetCursorPosition(26, 24);
+                    Console.Write("He's " + brad[5] + " inches tall.");
+                    Console.SetCursorPosition(2, 27);
+                    Console.Write("Here's what " + brad[1] + " had to say about himself: " + client3bio);
                     break;
-                case 3: Console.WriteLine("You have a match!" + "\nName: " + jimmy[1] + " " +
-                                            jimmy[2] + "\nAge: " + jimmy[3] + "\nHair Color: " + jimmy[4]
-                                            + "\nHeight: " + jimmy[5] + " inches" + "\n\n" + "Bio: " + client4bio);
+                case 3:
+                    Sound.MatchMusic();
+                    Thread.Sleep(1000);
+                    Graphics.MatchFont();
+                    Thread.Sleep(1000);
+                    Console.SetCursorPosition(22, 14);
+                    Console.Write("You have a match!");
+                    Console.SetCursorPosition(26, 18);
+                    Console.Write("His name is: " + jimmy[1] + " " + jimmy[2]);
+                    Console.SetCursorPosition(26, 20);
+                    Console.Write("He's " + jimmy[3] + " years old.");
+                    Console.SetCursorPosition(26, 22);
+                    Console.Write("He's got " + jimmy[4] + " hair.");
+                    Console.SetCursorPosition(26, 24);
+                    Console.Write("He's " + jimmy[5] + " inches tall.");
+                    Console.SetCursorPosition(2, 27);
+                    Console.Write("Here's what " + jimmy[1] + " had to say about himself: " + client4bio);
                     break;
-                case 4: Console.WriteLine("You have a match!" + "\nName: " + fred[1] + " " +
-                                            fred[2] + "\nAge: " + fred[3] + "\nHair Color: " + fred[4]
-                                            + "\nHeight: " + fred[5] + " inches" + "\n\n" + "Bio: " + client5bio);
+                case 4:
+                    Sound.MatchMusic();
+                    Thread.Sleep(1000);
+                    Graphics.MatchFont();
+                    Thread.Sleep(1000);
+                    Console.SetCursorPosition(22, 14);
+                    Console.Write("You have a match!");
+                    Console.SetCursorPosition(26, 18);
+                    Console.Write("His name is: " + fred[1] + " " + fred[2]);
+                    Console.SetCursorPosition(26, 20);
+                    Console.Write("He's " + fred[3] + " years old.");
+                    Console.SetCursorPosition(26, 22);
+                    Console.Write("He's got " + fred[4] + " hair.");
+                    Console.SetCursorPosition(26, 24);
+                    Console.Write("He's " + fred[5] + " inches tall.");
+                    Console.SetCursorPosition(2, 27);
+                    Console.Write("Here's what " + fred[1] + " had to say about himself: " + client5bio);
                     break;
-                case 5: Console.WriteLine("You have a match!" + "\nName: " + jennifer[1] + " " +
-                                            jennifer[2] + "\nAge: " + jennifer[3] + "\nHair Color: " + jennifer[4]
-                                            + "\nHeight: " + jennifer[5] + " inches" + "\n\n" + "Bio: " + client6bio);
+                case 5:
+                    Sound.MatchMusic();
+                    Thread.Sleep(1000);
+                    Graphics.MatchFont();
+                    Thread.Sleep(1000);
+                    Console.SetCursorPosition(22, 14);
+                    Console.Write("You have a match!");
+                    Console.SetCursorPosition(26, 18);
+                    Console.Write("Her name is: " + jennifer[1] + " " + jennifer[2]);
+                    Console.SetCursorPosition(26, 20);
+                    Console.Write("She's " + jennifer[3] + " years old.");
+                    Console.SetCursorPosition(26, 22);
+                    Console.Write("She's got " + jennifer[4] + " hair.");
+                    Console.SetCursorPosition(26, 24);
+                    Console.Write("She's " + jennifer[5] + " inches tall.");
+                    Console.SetCursorPosition(2, 27);
+                    Console.Write("Here's what " + jennifer[1] + " had to say about herself: " + client6bio);
                     break;
-                case 6: Console.WriteLine("You have a match!" + "\nName: " + susan[1] + " " +
-                                            susan[2] + "\nAge: " + susan[3] + "\nHair Color: " + susan[4]
-                                            + "\nHeight: " + susan[5] + " inches" + "\n\n" + "Bio: " + client7bio);
+                case 6:
+                    Sound.MatchMusic();
+                    Thread.Sleep(1000);
+                    Graphics.MatchFont();
+                    Thread.Sleep(1000);
+                    Console.SetCursorPosition(22, 14);
+                    Console.Write("You have a match!");
+                    Console.SetCursorPosition(26, 18);
+                    Console.Write("Her name is: " + susan[1] + " " + susan[2]);
+                    Console.SetCursorPosition(26, 20);
+                    Console.Write("She's " + susan[3] + " years old.");
+                    Console.SetCursorPosition(26, 22);
+                    Console.Write("She's got " + susan[4] + " hair.");
+                    Console.SetCursorPosition(26, 24);
+                    Console.Write("She's " + susan[5] + " inches tall.");
+                    Console.SetCursorPosition(2, 27);
+                    Console.Write("Here's what " + susan[1] + " had to say about herself: " + client7bio);
                     break;
-                case 7: Console.WriteLine("You have a match!" + "\nName: " + angelina[1] + " " +
-                                            angelina[2] + "\nAge: " + angelina[3] + "\nHair Color: " + angelina[4]
-                                            + "\nHeight: " + angelina[5] + " inches" + "\n\n" + "Bio: " + client8bio);
+                case 7:
+                    Sound.MatchMusic();
+                    Thread.Sleep(1000);
+                    Graphics.MatchFont();
+                    Thread.Sleep(1000);
+                    Console.SetCursorPosition(22, 14);
+                    Console.Write("You have a match!");
+                    Console.SetCursorPosition(26, 18);
+                    Console.Write("Her name is: " + angelina[1] + " " + angelina[2]);
+                    Console.SetCursorPosition(26, 20);
+                    Console.Write("She's " + angelina[3] + " years old.");
+                    Console.SetCursorPosition(26, 22);
+                    Console.Write("She's got " + angelina[4] + " hair.");
+                    Console.SetCursorPosition(26, 24);
+                    Console.Write("She's " + angelina[5] + " inches tall.");
+                    Console.SetCursorPosition(2, 27);
+                    Console.Write("Here's what " + angelina[1] + " had to say about herself: " + client8bio);
                     break;
-                case 8: Console.WriteLine("You have a match!" + "\nName: " + thelma[1] + " " +
-                                            thelma[2] + "\nAge: " + thelma[3] + "\nHair Color: " + thelma[4]
-                                            + "\nHeight: " + thelma[5] + " inches" + "\n\n" + "Bio: " + client9bio);
+                case 8:
+                    Sound.MatchMusic();
+                    Thread.Sleep(1000);
+                    Graphics.MatchFont();
+                    Thread.Sleep(1000);
+                    Console.SetCursorPosition(22, 14);
+                    Console.Write("You have a match!");
+                    Console.SetCursorPosition(26, 18);
+                    Console.Write("Her name is: " + thelma[1] + " " + thelma[2]);
+                    Console.SetCursorPosition(26, 20);
+                    Console.Write("She's " + thelma[3] + " years old.");
+                    Console.SetCursorPosition(26, 22);
+                    Console.Write("She's got " + thelma[4] + " hair.");
+                    Console.SetCursorPosition(26, 24);
+                    Console.Write("She's " + thelma[5] + " inches tall.");
+                    Console.SetCursorPosition(2, 27);
+                    Console.Write("Here's what " + thelma[1] + " had to say about herself: " + client9bio);
                     break;
-                case 9: Console.WriteLine("You have a match!" + "\nName: " + rose[1] + " " +
-                                            rose[2] + "\nAge: " + rose[3] + "\nHair Color: " + rose[4]
-                                            + "\nHeight: " + rose[5] + " inches" + "\n\n" + "Bio: " + client10bio);
+                case 9:
+                    Sound.MatchMusic();
+                    Thread.Sleep(1000);
+                    Graphics.MatchFont();
+                    Thread.Sleep(1000);
+                    Console.SetCursorPosition(22, 14);
+                    Console.Write("You have a match!");
+                    Console.SetCursorPosition(26, 18);
+                    Console.Write("Her name is: " + rose[1] + " " + rose[2]);
+                    Console.SetCursorPosition(26, 20);
+                    Console.Write("She's " + rose[3] + " years old.");
+                    Console.SetCursorPosition(26, 22);
+                    Console.Write("She's got " + rose[4] + " hair.");
+                    Console.SetCursorPosition(26, 24);
+                    Console.Write("She's " + rose[5] + " inches tall.");
+                    Console.SetCursorPosition(2, 27);
+                    Console.Write("Here's what " + rose[1] + " had to say about herself: " + client10bio);
                     break;
-                default: Console.WriteLine("No match for you...Buy a few cats?");
+                default:
+                    //no match scene
+                    Graphics.SoSorryConsole();
+                    Graphics.SoSorryFont();
                     break;
             }
+            Thread.Sleep(8000);
+            Console.SetCursorPosition(24, 34);
+            Console.WriteLine("Click a key to keep on movin'...");
+            Console.ReadKey(true);
         }
 
 

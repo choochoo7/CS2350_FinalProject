@@ -38,10 +38,15 @@ namespace CS2350_FinalProject_Team4
 
             Graphics.HonestFont();
 
-            Console.SetCursorPosition(0, 22);
-            Console.Write("Do you (1) pride yourself on being honest to a fault," +
-            " or (2) occasionally tell a \nwhite lie or two?\n");
-            Console.SetCursorPosition(35, 27);
+            Console.SetCursorPosition(0, 18);
+            Console.Write("   Do you:");
+            Console.SetCursorPosition(10, 22);
+            Console.Write("(1) Pride yourself in being honest to a fault.");
+            Console.SetCursorPosition(14, 24);
+            Console.Write("OR");
+            Console.SetCursorPosition(10, 26);
+            Console.Write("(2) occasionally tell a little white lie or two?");
+            Console.SetCursorPosition(35, 30);
             inValue = Console.ReadLine();
             //send input to error check before assigning
             userInput = Client.intCheck(inValue, 1);

@@ -66,6 +66,18 @@ namespace CS2350_FinalProject_Team4.Properties {
             }
         }
         
+        internal static System.IO.UnmanagedMemoryStream Cant_Get_Enough_CS {
+            get {
+                return ResourceManager.GetStream("Cant_Get_Enough_CS", resourceCulture);
+            }
+        }
+        
+        internal static System.IO.UnmanagedMemoryStream Drums_cs {
+            get {
+                return ResourceManager.GetStream("Drums_cs", resourceCulture);
+            }
+        }
+        
         internal static System.IO.UnmanagedMemoryStream Let_s_Get_It_On_CS {
             get {
                 return ResourceManager.GetStream("Let_s_Get_It_On_CS", resourceCulture);

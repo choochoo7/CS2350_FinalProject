@@ -12,6 +12,9 @@ namespace CS2350_FinalProject_Team4
 {
     class Graphics
     {
+        //random objest for response randomizer
+        private static Random randomBust = new Random();
+
         //Thread Sleep() will be used to slow console write speed for a better user experience
 
 
@@ -41,7 +44,7 @@ namespace CS2350_FinalProject_Team4
         private static extern bool MoveWindow(IntPtr hWnd, int x, int y, int w, int h, bool repaint);
 
 
-
+        //set general size, no visible cursor
         public static void ConsoleBasics()
         {
             //alter console graphics and measurements
@@ -51,6 +54,7 @@ namespace CS2350_FinalProject_Team4
             Console.Clear();
         }
 
+        //screen look for initial view
         public static void TeamSplash()
         {
             //opening sequece colors
@@ -59,6 +63,8 @@ namespace CS2350_FinalProject_Team4
             Console.Clear();
         }
 
+
+        //main intro sequence with animation
         public static void ConsoleIntro()
         {
             //opening sequece colors
@@ -67,6 +73,7 @@ namespace CS2350_FinalProject_Team4
             Console.Clear();
         }
 
+        //screen after intro sequence
         public static void GenderConsole()
         {
             Console.Clear();
@@ -76,6 +83,7 @@ namespace CS2350_FinalProject_Team4
             Console.SetCursorPosition(21, 22);
         }
 
+        //set background and text color for male user
         public static void MaleConsole()
         {
 
@@ -88,6 +96,7 @@ namespace CS2350_FinalProject_Team4
 
         }
 
+        //set background and text color for female user
         public static void FemaleConsole()
         {
 
@@ -99,6 +108,7 @@ namespace CS2350_FinalProject_Team4
             Console.SetCursorPosition(21, 22);
         }
 
+        //no match screen background
         public static void SoSorryConsole()
         {
 
@@ -110,6 +120,92 @@ namespace CS2350_FinalProject_Team4
 
         }
 
+        //age under 16 result screen
+        public static void TooYoungFont()
+        {
+
+            Console.Clear();
+            Thread.Sleep(1000);
+            Console.SetCursorPosition(2, 10);
+            Console.Write("ARE YOU CRAZY!?!  LIKE WE'RE GOING TO CONTRIBUTE TO THE DELINQUENCY OF A MINOR...");
+            Thread.Sleep(3000);
+            Console.SetCursorPosition(21, 18);
+            Console.Write("Since we wouldn't dream of that and you seem nice....");
+            Thread.Sleep(2000);
+            Console.SetCursorPosition(21, 22);
+            Console.Write("Let's just assume that was a typo and you try that again.");
+            Thread.Sleep(2500);
+            Console.SetCursorPosition(21, 26);
+            Console.Write("Take a moment to ponder the legal age of consent......");
+            Thread.Sleep(3500);
+            Console.Clear();
+
+        }
+
+        //final screen after positive match
+        public static void FinalScreen()
+        {
+            Console.Clear();
+            Thread.Sleep(1000);
+            Console.SetCursorPosition(2, 10);
+            Console.Write("We wish you the best of luck in your happy union!");
+            Thread.Sleep(3000);
+            Console.SetCursorPosition(14, 18);
+            Console.Write("We feel confident that this is the match for you.");
+            Thread.Sleep(2000);
+            Console.SetCursorPosition(14, 22);
+            Console.Write("After all, we used the latest in scientific matching tools...");
+            Thread.Sleep(2500);
+
+            //randomizer for occasional no match scene
+            int difResponse = Convert.ToInt32(randomBust.Next(4));
+            string display;
+
+
+            switch (difResponse)  //vary output message
+            {
+                case 1:
+                    display = "We made sure the coin had two different heads!";
+                    break;
+                case 2:
+                    display = "Tea leaves are a tried and true divination method....";
+                    break;
+                case 3:
+                    display = "Our giant spinning wheel of fortune never lies!";
+                    break;
+                default:
+                    display = "The ancient prophecies fortold your coming, AND your ideal date!\n  They're nice that way..";
+                    break;
+            }
+
+
+            Console.SetCursorPosition(2, 26);
+            Console.Write(display);
+            Thread.Sleep(3500);
+            Console.Clear();
+
+            Console.SetCursorPosition(21, 26);
+            Console.Write("Press any key to begin your new Happy Existence!");
+            Console.ReadKey(true);
+        }
+
+
+        //the following are ascii art fonts for screen headers and graphics
+
+        public static void MatchFont()
+        {
+
+            Console.Clear();
+            Console.WriteLine(@"         _  _              _  _              _  _              _  _            ");
+            Console.WriteLine(@"       /` \/ `\   _  _   /` \/ `\   _  _   /` \/ `\   _  _   /` \/ `\   _  _   ");
+            Console.WriteLine(@"       \      / /` \/ `\ \      / /` \/ `\ \      / /` \/ `\ \      / /` \/ `\ ");
+            Console.WriteLine(@"        '.  .'  \      /  '.  .'  \      /  '.  .'  \      /  '.  .'  \      / ");
+            Console.WriteLine(@"          \/     '.  .'     \/     '.  .'     \/     '.  .'     \/     '.  .'  ");
+            Console.WriteLine(@"                   \/                \/                \/                \/    ");
+
+            Thread.Sleep(1500);
+
+        }
 
 
         public static void HonestFont()
@@ -180,6 +276,7 @@ namespace CS2350_FinalProject_Team4
             Console.WriteLine(@"  |____/ \___/|_|\__,_|");
         }
 
+        //graphics for intro screen
         public static void TeamFont()
         {
             Thread.Sleep(2000);
@@ -192,7 +289,7 @@ namespace CS2350_FinalProject_Team4
             Console.WriteLine(@"               \ \_\ \____\ \__/.\_\ \_\ \_\ \_\   \ \_\ \____/\ \____/\ \_\ ");
             Console.WriteLine(@"                \/_/\/____/\/__/\/_/\/_/\/_/\/_/    \/_/\/___/  \/___/  \/_/ ");
             Thread.Sleep(2000);
-            Console.WriteLine("\n\n\n\n\t\t\t\tInset Names Here\n\n\n\n\n\n");
+            Console.WriteLine("\n\n\n\n\t\t  [ Chuda Curtis, Stanley Muthoga, Rick Bradley ]\n\n\n\n\n\n");
             Thread.Sleep(2000);
             Console.WriteLine(@"                                                      .                    ");
             Console.WriteLine(@"                                                     _|_                   ");
@@ -207,9 +304,9 @@ namespace CS2350_FinalProject_Team4
 
         public static void SoSorryFont()
         {
-            Sound.soSorryMusic();
+            Sound.SoSorryMusic();
             Console.WriteLine(@"                  |                   ");
-            Console.WriteLine(@"                  |                   ");   
+            Console.WriteLine(@"                  |                   ");
             Console.WriteLine(@"                 :::,_____            ");
             Console.WriteLine(@"               ::::/./^^^^\           ");
             Console.WriteLine(@"            :::::::|| ^ ^ |           ");
@@ -227,7 +324,7 @@ namespace CS2350_FinalProject_Team4
             Thread.Sleep(2000);
             Console.WriteLine("You know, sometimes.......");
             Thread.Sleep(2000);
-            
+
             Console.SetCursorPosition(21, 25);
             Console.Write("these ");
             Thread.Sleep(400);
@@ -242,14 +339,14 @@ namespace CS2350_FinalProject_Team4
             Console.Write("out ");
             Thread.Sleep(200);
             Console.Write("..... ");
-            Thread.Sleep(3000);
-            
+            Thread.Sleep(4000);
 
-            
+
+
             Console.SetCursorPosition(30, 29);
             Console.WriteLine("We recommend:");
             Thread.Sleep(2000);
-
+            //change console look for next screen
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
             Console.Clear();
@@ -267,7 +364,7 @@ namespace CS2350_FinalProject_Team4
             Console.Write("Lots ");
             Thread.Sleep(400);
             Console.Write("and LOTS ");
-                        Thread.Sleep(400);
+            Thread.Sleep(400);
             Console.Write("of cats....");
             Thread.Sleep(4000);
 
@@ -275,9 +372,11 @@ namespace CS2350_FinalProject_Team4
             Console.WriteLine("Press any key to resume the rest of your life....");
             Console.ReadKey(true);
 
+            //stop program here
+            Environment.Exit(0);
         }
 
-
+        //animated hearts moving accross screen and meeting
         public static void HeartsMoving()
         {
             int movement = 1;
@@ -287,7 +386,7 @@ namespace CS2350_FinalProject_Team4
             {
                 switch (movement)
                 {
-                    case 1:
+                    case 1: //moving across top and bottom
                         for (int i = 1; i < 73; i++)
                         {
                             Console.SetCursorPosition(i, 2);
@@ -329,7 +428,7 @@ namespace CS2350_FinalProject_Team4
                         }
                         movement++;
                         break;
-                    case 2:
+                    case 2: //moving towards each other in center
                         for (int i = 1; i < 31; i++)
                         {
                             Console.SetCursorPosition(i, 18);
@@ -373,7 +472,7 @@ namespace CS2350_FinalProject_Team4
                         Console.ForegroundColor = ConsoleColor.DarkRed;
                         SystemSounds.Exclamation.Play();
 
-                        for (int i = 18; i > 8; i--)
+                        for (int i = 18; i > 8; i--)    //moving up from center
                         {
                             Console.SetCursorPosition(30, (i));
                             Console.WriteLine("  **    **  ");

@@ -17,6 +17,7 @@ namespace CS2350_FinalProject_Team4
         private string hairColor;
         private int height;
         private ArrayList currentClient;
+
         // private Graphics graphObj;
 
         // this is a no - agrument constructor
@@ -60,7 +61,7 @@ namespace CS2350_FinalProject_Team4
             Console.SetCursorPosition(40, 27);
             inValue = Console.ReadLine();
             gend = intCheck(inValue, 1);
-
+            
             //delay screen
             Thread.Sleep(200);
 
@@ -79,9 +80,9 @@ namespace CS2350_FinalProject_Team4
         {
             string fName;   //local variable
 
-            Console.SetCursorPosition(26, 22);
-            Console.Write("Please enter your first name:\n");
-            Console.SetCursorPosition(35, 27);
+            Console.SetCursorPosition(26, 14);
+            Console.Write("Please enter your first name:");
+            Console.SetCursorPosition(35, 22);
             fName = Console.ReadLine();
             Console.Clear();
 
@@ -92,9 +93,9 @@ namespace CS2350_FinalProject_Team4
         {
             string lName;   //local variable
 
-            Console.SetCursorPosition(26, 22);
-            Console.Write("Please enter your last name:\n");
-            Console.SetCursorPosition(35, 27);
+            Console.SetCursorPosition(26, 14);
+            Console.Write("Now enter your last name:");
+            Console.SetCursorPosition(35, 22);
             lName = Console.ReadLine();
             Console.Clear();
 
@@ -106,23 +107,32 @@ namespace CS2350_FinalProject_Team4
             int age;   //local variable
             string inValue;
 
-            Console.SetCursorPosition(26, 22);
-            Console.Write("Please enter your numeric Age:\n");
+            Console.SetCursorPosition(10, 14);
+            Console.Write("How old are you? No fibbing please, this is serious stuff here!");
+            Console.SetCursorPosition(26, 17);
+            Console.Write("Please enter your numeric Age:");
             Console.SetCursorPosition(35, 27);
             inValue = Console.ReadLine();
             age = intCheck(inValue, 2);
+            if (age < 16)
+            {
+                Graphics.TooYoungFont();
+                getAge();
+            }
+
             Console.Clear();
 
             return age;
         }
 
+
         public static string getHairColor()
         {
             string hair;   //local variable
 
-            Console.SetCursorPosition(26, 22);
-            Console.Write("Please enter your hair color:\n");
-            Console.SetCursorPosition(35, 27);
+            Console.SetCursorPosition(26, 14);
+            Console.Write("What's your hair color?...currently....:");
+            Console.SetCursorPosition(35, 22);
             hair = Console.ReadLine();
             Console.Clear();
 
@@ -134,9 +144,11 @@ namespace CS2350_FinalProject_Team4
             int hght;   //local variable
             string inValue;
 
-            Console.SetCursorPosition(26, 22);
-            Console.Write("Please enter your height:\n");
-            Console.SetCursorPosition(35, 27);
+            Console.SetCursorPosition(26, 14);
+            Console.Write("How tall are you in inches?");
+            Console.SetCursorPosition(2, 17);
+            Console.Write("12 inches per foot plus the remainder.....Don't strain yourself, just get close...");
+            Console.SetCursorPosition(35, 22);
             inValue = Console.ReadLine();
             hght = intCheck(inValue, 2);
             Console.Clear();
@@ -227,7 +239,7 @@ namespace CS2350_FinalProject_Team4
 
                                 //invalid entry
                                 MessageBox.Show(display, "This isn't that hard, try to pay attention.", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                Console.SetCursorPosition(35, (27 + i));
+                                Console.SetCursorPosition(35, (30 + i));
                                 inValue = Console.ReadLine();
                             }
                             break;
@@ -256,7 +268,7 @@ namespace CS2350_FinalProject_Team4
                                 }
                                 //invalid entry
                                 MessageBox.Show(display, "Seriously?!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                Console.SetCursorPosition(35, (27 + i));
+                                Console.SetCursorPosition(35, (30 + i));
                                 inValue = Console.ReadLine();
                             }
                             break;
@@ -270,10 +282,11 @@ namespace CS2350_FinalProject_Team4
                 {
                     //non-numeric entry
                     MessageBox.Show("Let's try a real number this time, shall we?", "Seriously?!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Console.SetCursorPosition(35, (27 + i));
+                    Console.SetCursorPosition(35, (30 + i));
                     inValue = Console.ReadLine();
                 }
 
+                i++;
                 i++;
 
             }   //close while

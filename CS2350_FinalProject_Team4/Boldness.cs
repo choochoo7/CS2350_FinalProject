@@ -36,11 +36,17 @@ namespace CS2350_FinalProject_Team4
 
             Graphics.BoldFont();
 
-            Console.SetCursorPosition(0, 22);
-            Console.Write("Which are you? (1) You love trying new things, like sky diving and spicy Persian \nfood." +
-               " (2) You stick to the known, like eating either chocolate or vanilla ice cream. Occasionally you " +
-               "go out on a limb and buy strawberry.\n");
-            Console.SetCursorPosition(35, 27);
+            Console.SetCursorPosition(0, 18);
+            Console.Write("   Which are you?:");
+            Console.SetCursorPosition(10, 22);
+            Console.Write("(1) You love trying new things, like sky diving and spicy Persian food.");
+            Console.SetCursorPosition(14, 24);
+            Console.Write("OR");
+            Console.SetCursorPosition(10, 26);
+            Console.Write("(2) You stick to the known, like eating either chocolate or vanilla");
+            Console.SetCursorPosition(10, 27);
+            Console.WriteLine("ice cream. Occasionally you go out on a limb and buy strawberry.");
+            Console.SetCursorPosition(35, 30);
             inValue = Console.ReadLine();
             //send input to error check before assigning
             userInput = Client.intCheck(inValue, 1);

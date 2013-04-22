@@ -36,12 +36,17 @@ namespace CS2350_FinalProject_Team4
 
             Graphics.UnderstandFont();
 
-            Console.SetCursorPosition(0, 22);
-            Console.Write("Your best friend confesses that he/she borrowed your car to run to the grocery store for" +
-                " an emergency ice cream run. Someone keyed the car while he/she was there. " +
-                "Do you (1) flip out and find a new best friend or (2) try calm down and empathize;" +
-                " ice cream does sound pretty good.\n");
-            Console.SetCursorPosition(35, 27);
+            Console.SetCursorPosition(0, 18);
+            Console.Write("   Your best friend confesses that he/she borrowed your car to run to \n" +
+                "   the grocery store for an emergency ice cream run. Someone keyed\n" + 
+                "   the car while he/she was there. Do you:");
+            Console.SetCursorPosition(10, 22);
+            Console.Write("(1) flip out and find a new best friend");
+            Console.SetCursorPosition(14, 24);
+            Console.Write("OR");
+            Console.SetCursorPosition(10, 26);
+            Console.Write("(2) try to calm down and empathize; ice cream does sound pretty good.");
+            Console.SetCursorPosition(35, 30);
             inValue = Console.ReadLine();
             //send input to error check before assigning
             userInput = Client.intCheck(inValue, 1);
@@ -63,4 +68,4 @@ namespace CS2350_FinalProject_Team4
 
     }   //close CLass
 
-}   //close Namespace
+}   //close Namespace1

@@ -23,9 +23,9 @@ namespace CS2350_FinalProject_Team4
             Graphics.ConsoleBasics();
             Graphics.TeamSplash();
             
-
+            
             //call intro music
-            Sound.introMusic();
+            Sound.IntroMusic();
 
             //call text for initial splash page
             Graphics.TeamFont();
@@ -44,13 +44,11 @@ namespace CS2350_FinalProject_Team4
             //send client object to compatability class
             Compatability compare = new Compatability(currentClient.CurrentClient);
 
-            Console.ReadKey(true);
-
-            Graphics.SoSorryConsole();
-            Graphics.SoSorryFont();
-
-            
-            
+            //set console size and basic attributes
+            Graphics.ConsoleIntro();
+            Console.Clear();
+            Graphics.FinalScreen();
+              
 
         }   //close main
 
