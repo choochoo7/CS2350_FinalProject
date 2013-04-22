@@ -14,7 +14,7 @@ namespace CS2350_FinalProject_Team4
         {
             this.boldnessRating = getBoldnessRating();
         }
-
+        // Property
         public int BoldnessRating
         {
             get
@@ -33,9 +33,9 @@ namespace CS2350_FinalProject_Team4
         {
             int charRate = 3;
             int userInput;
-
+            // Calls the boldFront method in the Graphics Class
             Graphics.BoldFont();
-
+            // boldness question
             Console.SetCursorPosition(0, 18);
             Console.Write("   Which are you?:");
             Console.SetCursorPosition(10, 22);
