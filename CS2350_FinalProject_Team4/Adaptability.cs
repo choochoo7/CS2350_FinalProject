@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,12 +9,12 @@ namespace CS2350_FinalProject_Team4
     {
         private int adaptabilityRating;
         private static string inValue;
-
+        // Constructor
         public Adaptability()
         {
             this.adaptabilityRating = getAdaptabilityRating();
         }
-
+        // property
         public int AdaptabilityRating
         {
             get
@@ -33,9 +33,9 @@ namespace CS2350_FinalProject_Team4
         {
             int charRate = 3;
             int userInput;
-
+            // Calls the AdaptableFront method in the Graphics Class
             Graphics.AdaptableFont();
-
+            // Adaptability question
             Console.SetCursorPosition(0, 18);
             Console.Write("   Your job asks you to move to Germany. Do you:");
             Console.SetCursorPosition(10, 22);
